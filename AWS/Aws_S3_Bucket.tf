@@ -20,14 +20,7 @@ resource "aws_s3_bucket" "ravitest210" {
   }
 }
 
-resource "aws_s3_bucket" "deletescenario" {
-  bucket = "examplebuckettftest"
-  acl    = "private"
-  versioning {
-    enabled = false
-    mfa_delete = false
-  }
-}
+
 
 resource "aws_s3_bucket" "deletescenario_1" {
   bucket = "examplebuckettftest"
