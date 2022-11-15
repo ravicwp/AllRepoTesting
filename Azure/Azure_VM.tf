@@ -10,7 +10,7 @@ resource "azurerm_key_vault" "testing1" {
 
 
 resource "azurerm_key_vault" "testing2" {
-  name                        = "des-example-keyvault_ravi1"
+  name                        = "des-example-keyvault_ravi2"
   location                    = azurerm_resource_group.example.location
   resource_group_name         = azurerm_resource_group.example.name
   tenant_id                   = data.azurerm_client_config.current.tenant_id
@@ -20,7 +20,7 @@ resource "azurerm_key_vault" "testing2" {
 }
 
 resource "azurerm_key_vault" "testing3" {
-  name                        = "des-example-keyvault_ravi1"
+  name                        = "des-example-keyvault_ravi3"
   location                    = azurerm_resource_group.example.location
   resource_group_name         = azurerm_resource_group.example.name
   tenant_id                   = data.azurerm_client_config.current.tenant_id
@@ -30,3 +30,13 @@ resource "azurerm_key_vault" "testing3" {
   
 }
 
+resource "azurerm_key_vault" "testing4" {
+  name                        = "des-example-keyvault_ravi4"
+  location                    = azurerm_resource_group.example.location
+  resource_group_name         = azurerm_resource_group.example.name
+  tenant_id                   = data.azurerm_client_config.current.tenant_id
+  sku_name                    = "premium"
+  enabled_for_disk_encryption = false
+  purge_protection_enabled    = false
+  
+}
