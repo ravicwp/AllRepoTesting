@@ -27,5 +27,6 @@ resource "azurerm_key_vault" "testing3" {
   sku_name                    = "premium"
   enabled_for_disk_encryption = false
   purge_protection_enabled    = false
+  
 }
 
