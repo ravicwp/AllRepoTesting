@@ -2,7 +2,8 @@ resource "aws_s3_bucket" "ravi2" {
   bucket = "examplebuckettftest"
   versioning {
    mfa_delete = false
-}}
+}
+}
 
 resource "aws_s3_bucket" "ravitest1" {
   bucket = "ravitestignored"
