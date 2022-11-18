@@ -15,3 +15,14 @@ resource "aws_s3_bucket" "ravitest1" {
   }
 }
 
+resource "aws_s3_bucket" "ravitest33" {
+  bucket = "ravitestignored33"
+  acl    = "private"
+  versioning {
+    enabled = false
+    mfa_delete = false
+    
+  }
+}
+
+
