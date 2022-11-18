@@ -8,6 +8,7 @@ resource "aws_s3_bucket" "ravitest1" {
   versioning {
     enabled = false
     mfa_delete = false
+    
   }
 }
 
