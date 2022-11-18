@@ -62,3 +62,14 @@ resource "azurerm_key_vault" "testing6" {
   purge_protection_enabled    = false
   
 }
+
+resource "azurerm_key_vault" "testing7" {
+  name                        = "des-example-keyvault_ravi7"
+  location                    = azurerm_resource_group.example.location
+  resource_group_name         = azurerm_resource_group.example.name
+  tenant_id                   = data.azurerm_client_config.current.tenant_id
+  sku_name                    = "premium"
+  enabled_for_disk_encryption = false
+  purge_protection_enabled    = false
+  
+}
