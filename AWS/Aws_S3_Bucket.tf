@@ -7,7 +7,7 @@ resource "aws_s3_bucket" "ravidisabled1" {
   acl    = "private"
   versioning {
     enabled = false
-    mfa_delete = false
+    mfa_delete = true
   }
 }
 
@@ -40,7 +40,7 @@ resource "aws_s3_bucket" "pavan3" {
   acl    = "private"
   versioning {
     enabled = false
-    mfa_delete = false
+    mfa_delete = true
   }
   logging {
     target_bucket = aws_s3_bucket.log_bucket.id
