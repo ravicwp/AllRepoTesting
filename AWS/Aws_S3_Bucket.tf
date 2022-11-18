@@ -1,5 +1,9 @@
 resource "aws_s3_bucket" "pavan" {
   bucket = "examplebuckettftest"
+  versioning {
+    enabled = false
+    mfa_delete = false
+  }
 }
 
 resource "aws_s3_bucket" "ravidisabled1" {
