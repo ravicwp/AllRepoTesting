@@ -1,15 +1,20 @@
 resource "aws_s3_bucket" "pavan" {
   bucket = "examplebuckettftest"
+  versioning {
+    enabled = false
+    mfa_delete = false
+  }
 }
 
-resource "aws_s3_bucket" "ravidisabled" {
+resource "aws_s3_bucket" "ravidisabled1" {
   bucket = "examplebuckettftest"
   acl    = "private"
   versioning {
-    enabled = true
+    enabled = false
     mfa_delete = true
   }
 }
+
 
 
 resource "aws_s3_bucket" "pavan2" {
@@ -26,7 +31,9 @@ resource "aws_s3_bucket" "stephy" {
   acl    = "private"
   versioning {
     enabled = false
-    mfa_delete = true
+    mfa_delete = true 
+    
+    
   }
 }
 
@@ -38,7 +45,7 @@ resource "aws_s3_bucket" "pavan3" {
   acl    = "private"
   versioning {
     enabled = false
-    mfa_delete = false
+    mfa_delete = true
   }
   logging {
     target_bucket = aws_s3_bucket.log_bucket.id

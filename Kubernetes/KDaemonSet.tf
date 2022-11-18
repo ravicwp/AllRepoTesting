@@ -7,6 +7,7 @@ resource "kubernetes_daemonset" "example" {
     }
   }
   
+  
   spec {
     selector {
       match_labels = {
